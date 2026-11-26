@@ -1,0 +1,12 @@
+services:
+  dity-security:
+    build: .
+    image: dity-security:latest
+    container_name: dity-security
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - dity-data:/app/data
+
+volumes:
+  dity-data:
