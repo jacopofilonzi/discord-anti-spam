@@ -22,6 +22,4 @@ jobs:
     needs: typecheck
     steps:
       - uses: actions/checkout@v5
-      # docker-compose.yml reads .env; the example file is enough to build
-      - run: cp .env.example .env
-      - run: docker compose build
+      - run: docker build .

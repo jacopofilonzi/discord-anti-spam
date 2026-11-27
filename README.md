@@ -58,9 +58,11 @@ Required permissions: View Channels, Send Messages, Embed Links, Read Message Hi
 
 ```bash
 cp .env.example .env    # then set DISCORD_TOKEN
-docker compose up -d --build
+docker compose up -d
 docker compose logs -f  # shows the invite link
 ```
+
+The image is pulled from `ghcr.io/jacopofilonzi/discord-anti-spam` (amd64 and arm64). To update: `docker compose pull && docker compose up -d`.
 
 The SQLite database lives in the `dity-data` Docker volume.
 

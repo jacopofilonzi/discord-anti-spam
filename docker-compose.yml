@@ -1,7 +1,6 @@
 services:
   dity-security:
-    build: .
-    image: dity-security:latest
+    image: ghcr.io/jacopofilonzi/discord-anti-spam:latest
     container_name: dity-security
     restart: unless-stopped
     env_file: .env
